@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interview Summary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="interview-card">
+  <h1 class="title">Interview Summary</h1>
+
+  <p><b>Score:</b> <span id="score"></span></p>
+  <p><b>Strengths:</b> <span id="strengths"></span></p>
+  <p><b>Weaknesses:</b> <span id="weaknesses"></span></p>
+  <p><b>Suggested Questions:</b> <span id="suggestions"></span></p>
+
+  <button onclick="window.location.href='start.html'" class="analyze-btn">
+    Start New Interview
+  </button>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("score").textContent = params.get("score");
+document.getElementById("strengths").textContent = params.get("strengths");
+document.getElementById("weaknesses").textContent = params.get("weaknesses");
+document.getElementById("suggestions").textContent = params.get("suggestions");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Interview Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .analyze-btn {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Add spacing between Analyze and Finish */
+    .finish-btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="login.html" class="back-link">← Back to Login</a>
+
+<div class="interview-wrapper">
+  <div class="interview-card">
+    <h1 class="title">AI Interview Practice</h1>
+
+    <div class="question-box">
+      <p class="question-label">Interview Question</p>
+      <p class="question-text" id="questionText">Loading question...</p>
+    </div>
+
+    <textarea id="answer" class="answer-box" placeholder="Type your answer here..."></textarea>
+
+    <div class="button-row">
+      <button onclick="prevQuestion()">Previous</button>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+
+    <button class="analyze-btn" onclick="submitAnswer()">Analyze Answer</button>
+    <button class="finish-btn" onclick="finishInterview()">Finish Interview</button>
+
+    <div id="result" class="result-box"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
